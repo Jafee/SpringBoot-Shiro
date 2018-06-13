@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+</head>
+<body>
+<p th:if="${error}" th:text="${errorInfo}"></p>
+<form method="post" action="/login">
+    <input name="username" type="text"/>
+    <input name="password" type="password"/>
+    <input type="checkbox" name="rememberMe"/>
+    <input type="submit" value="提交"/>
+</form>
+</body>
+</html>

@@ -22,7 +22,7 @@ The best practices of integrating Spring Boot with Apache Shiro
 | Username | Password | Role  | Permission       |
 |----------|----------|-------|------------------|
 | admin    | 123456   | admin | `/` , `/manager` |
-| User     | 123456   | user  | `/`              |
+| user     | 123456   | user  | `/`              |
 
 
 ## License

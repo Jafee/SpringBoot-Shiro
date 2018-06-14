@@ -2,6 +2,7 @@ package com.springbootshiro.controller;
 
 import com.springbootshiro.bean.User;
 import com.springbootshiro.service.UserService;
+import org.apache.shiro.authc.UnknownAccountException;
 import org.apache.shiro.authz.AuthorizationException;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -51,12 +52,11 @@ public class HomeController {
         return "unauthorized";
     }
 
-    @ExceptionHandler({AuthorizationException.class})
+    @ExceptionHandler({AuthorizationException.class, UnknownAccountException.class})
     @ResponseStatus(HttpStatus.FORBIDDEN)
     public String handleException(AuthorizationException e, Model model) {
 
         return "unauthorized";
     }
-
 
 }

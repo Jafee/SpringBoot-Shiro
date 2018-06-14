@@ -1,5 +1,6 @@
 package com.springbootshiro.config;
 
+import org.apache.shiro.codec.Base64;
 import org.apache.shiro.realm.Realm;
 import org.apache.shiro.spring.web.config.DefaultShiroFilterChainDefinition;
 import org.apache.shiro.spring.web.config.ShiroFilterChainDefinition;
@@ -57,6 +58,7 @@ public class ShiroConfig {
     public CookieRememberMeManager cookieRememberMeManager() {
         CookieRememberMeManager cookieRememberMeManager = new CookieRememberMeManager();
         cookieRememberMeManager.setCookie(simpleCookie());
+        cookieRememberMeManager.setCipherKey(Base64.decode("m0@5ZZ9L4jjQXn7MREp^b^7I"));
         return cookieRememberMeManager;
     }
 
